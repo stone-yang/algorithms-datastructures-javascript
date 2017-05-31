@@ -127,7 +127,7 @@ class CustomArray {
     const arr = this.dataStore;
     // 快速排序
     function _qs(leftStart, rightStart) {
-      if (leftStart < rightStart) {
+      if (leftStart >= rightStart) {
         return;
       }
       let left = leftStart;
