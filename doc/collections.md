@@ -36,8 +36,8 @@ const a = [1,2,[3,4,[5,6],7],8,9,10,[11,12],13,[14]];
 flatten(a);  // [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
 ```
 > **Interpretation:**  
-一般递归遍历数组，优先将嵌套最深的元素还原  
-<del>解法很多,适合发挥脑洞...</del>  
+> 一般递归遍历数组，优先将嵌套最深的元素还原  
+> <del>解法很多,适合发挥脑洞...</del>  
 
 最标准<del>中规中矩</del>的解法:
 
@@ -190,8 +190,8 @@ fBound.prototype = new fNOP();
 洗牌: 生成n张牌(编号从1到n),将其打乱顺序
 
 > **Interpretation:**  
-1. 生成n张牌的方法很多，这里可以尽量懒一些，不用动不动就去敲loop  
-2. 洗牌的思路: 遍历序列，每张与随机一个位置的牌交换
+> 1. 生成n张牌的方法很多，这里可以尽量懒一些，不用动不动就去敲loop  
+> 2. 洗牌的思路: 遍历序列，每张与随机一个位置的牌交换
 
 ``` javascript
 function genCards(n) {
@@ -212,7 +212,7 @@ function shuffle(cards) {
 洗牌: 简单实现对象深拷贝
 
 > **Interpretation:**  
-一般来说在支持JSON的环境优先通过JSON转换
+> 一般来说在支持JSON的环境优先通过JSON转换
 
 ``` javascript
 function deepCopy(obj) {
@@ -241,7 +241,7 @@ function deepCopy(obj) {
 用递归实现```sum(1,100000)  // 100001```
 
 > **Interpretation:**  
-这里需要尾递归优化才不会栈溢出。然而多数js运行环境并不能默认支持尾递归优化，目前只有在--harmony的严格模式下才能实现
+> 这里需要尾递归优化才不会栈溢出。然而多数js运行环境并不能默认支持尾递归优化，目前只有在--harmony的严格模式下才能实现
 
 ``` javascript
 function sum(x, y) {

@@ -18,6 +18,6 @@
 * 优先队列 ------ Priority Queue
 
 ## 3. 收藏集 collections
-* 斐波那契数列的多种解法 ------ fibonacci
+* 斐波那契数列的多种解法 ------ [fibonacci](https://github.com/stone-yang/algorithms-datastructures-javascript/tree/master/doc/fibonacci.md)
 * 异步流程控制 - Lazyman ------ lazyman
-* 记那些短小而精悍的JS代码 ------ collections
+* 记那些短小而精悍的JS代码 ------ [collections](https://github.com/stone-yang/algorithms-datastructures-javascript/tree/master/doc/collections.md)
