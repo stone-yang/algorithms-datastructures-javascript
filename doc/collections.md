@@ -1,6 +1,6 @@
 # 记那些短小而精悍的JS代码
 
-###Question 1:
+### Question 1:
 
 实现multiply函数 
 
@@ -11,8 +11,8 @@ multiply(1)(2)(3)(4)(5)(6) - multiply(1)(2)(3)(4)(5)  // 600
 ```
 
 > **Interpretation:**  
-1. multiply函数需要每次都返回一个函数才能进行无限次柯里化  
-2. 对于运算操作符,如果操作数是对象将优先隐式调用对象的valueOf方法.故只需要覆盖valueOf返回累计乘数即可
+> 1. multiply函数需要每次都返回一个函数才能进行无限次柯里化  
+> 2. 对于运算操作符,如果操作数是对象将优先隐式调用对象的valueOf方法.故只需要覆盖valueOf返回累计乘数即可
 
 ``` javascript
 function multiply(init) {
@@ -26,7 +26,7 @@ function multiply(init) {
 }
 ```  
 
-###Question 2:  
+### Question 2:  
 
 将深度嵌套的数组转换成一维 flatten nested array  
 例如:  
@@ -89,7 +89,7 @@ JSON.stringify(a).replace(/\[|\]/g, '');
 
 ```
 
-###Question 3:
+### Question 3:
  
 简单实现一个debounce函数  
 示例:
@@ -101,7 +101,7 @@ const b = debounce(a, 5000);
 ```  
 
 > **Interpretation:**  
-设置计时器处理函数节流,并且应用闭包记录计时器
+> 设置计时器处理函数节流,并且应用闭包记录计时器
 
 ``` javascript
 function debounce(fn, ms) {
@@ -112,17 +112,17 @@ function debounce(fn, ms) {
   };
 }
 ```  
-###Question 4:
+### Question 4:
  
 实现es5的Function.prototype.bind函数
 
 > **Interpretation:**  
-这里需要特别留意调用函数的方式  
-复习一下函数调用模式:  
-1. 函数调用 - fn(a, b)  
-2. 方法调用 - 函数作为对象的属性调用 obj.fn(a, b)  
-3. 构造器调用 - 由new操作符调用  new fn(a, b)  
-4. Apply调用 - 由Function.prototype.apply或Function.prototype.call调用 fn.apply(a, b, c)  
+> 这里需要特别留意调用函数的方式  
+> 复习一下函数调用模式:  
+> 1. 函数调用 - fn(a, b)  
+> 2. 方法调用 - 函数作为对象的属性调用 obj.fn(a, b)  
+> 3. 构造器调用 - 由new操作符调用  new fn(a, b)  
+> 4. Apply调用 - 由Function.prototype.apply或Function.prototype.call调用 fn.apply(a, b, c)  
 
 一般很容易想到最简单的实现方法(如下)，可以适用绝大多数情况。但是这种实现并不满足构造器调用的情况。如果要实现更完整的polyfill还需要针对构造器调用进行扩展。
 
@@ -139,8 +139,7 @@ if (!Function.prototype.bind) {
   }
 }
 ```
-引用一段MDN上的polyfill [Function.prototype.bind]
-(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind#Polyfill)。其中，bind函数被调用后返回了一个**fBound**函数。最终调用**fBound**函数时会判断当前的调用模式进而绑定不同的对象。这里的判断是通过加入原型继承的扩展实现的。
+引用一段MDN上的polyfill [Function.prototype.bind](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind#Polyfill)  其中，bind函数被调用后返回了一个**fBound**函数。最终调用**fBound**函数时会判断当前的调用模式进而绑定不同的对象。这里的判断是通过加入原型继承的扩展实现的。
 
 ``` javascript
 if (!Function.prototype.bind) {
@@ -186,7 +185,7 @@ fBound.prototype = new fNOP();
 如果是一般调用的情况，this的指向可能会是window或者undefined，取决于运行环境（js著名的坑之一）如果是方法调用或apply调用，this将指向一个与fNOP无关的对象。bind函数绑定的对象应该为最初传入Function.prototype.bind的oThis。  
 只有在构造器调用的情况下```this instanceof fNOP```判断将通过，此时this指向**fBound**作为构造函数生成的实例，它继承自fNOP。这个实例最终会成为bind函数的绑定对象，之前传入的oThis将被忽略。
 
-###Question 5:  
+### Question 5:  
 
 洗牌: 生成n张牌(编号从1到n),将其打乱顺序
 
@@ -208,7 +207,7 @@ function shuffle(cards) {
 
 ```
 
-###Question 6:  
+### Question 6:  
 
 洗牌: 简单实现对象深拷贝
 
@@ -237,7 +236,7 @@ function deepCopy(obj) {
 
 ```
 
-###Question 7:  
+### Question 7:  
 
 用递归实现```sum(1,100000)  // 100001```
 
