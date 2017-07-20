@@ -185,6 +185,21 @@ function deepCopy(obj) {
 
 /**
  * Question 7:
+ * 用递归实现sum(1,100000)
+ * Interpretation: 
+ * 这里需要尾递归优化才不会栈溢出,目前只有在--harmony的严格模式下才能实现
+ */
+function sum(x, y) {
+  'use strict'
+  if (y > 0) {
+    return sum(x + 1, y - 1);
+  } else {
+    return x;
+  }
+}
+
+/**
+ * Question 8:
  * 将金额的数字转换成中文大写输出
  */
 function formatChnAmount(n) {
