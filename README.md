@@ -1,11 +1,11 @@
 # Javascript笔记: 数据结构与算法
 
 ## 1. 数据结构 data structure
-* 数组 ------ Array
-* 栈 ------ Stack
+* 数组 ------ [Array](https://github.com/stone-yang/algorithms-datastructures-javascript/tree/master/doc/array.md)
+* 栈 ------ [Stack](https://github.com/stone-yang/algorithms-datastructures-javascript/tree/master/doc/stack.md)
 * 队列 ------ Queue
 * 链表 ------ Linked List
-* 二叉查找树 ------ [Binary Search Tree](https://github.com/stone-yang/algorithms-datastructures-javascript/tree/master/doc/binaryTree)
+* 二叉查找树 ------ [Binary Search Tree](https://github.com/stone-yang/algorithms-datastructures-javascript/tree/master/doc/binaryTree.md)
 * 集合 ------ Set
 
 ## 2. 算法 algorithms
