@@ -1,11 +1,12 @@
-/**
- * 二叉树 Binary Search Tree
- * Notes: 二叉查找树将二叉树的2个节点分为左节点和右节点, 左节点的值小于父节点, 右节点的值大于父节点. 
- * 因此, 二叉查找树的插入查找节点操作效率很高. 缺点是删除节点比较麻烦
- */
+# 二叉树 Binary Search Tree
 
+二叉查找树将二叉树的2个节点分为左节点和右节点，左节点的值小于父节点，右节点的值大于父节点。因此，二叉查找树的插入查找节点操作效率很高。缺点是删除节点比较麻烦。
+
+## 1. 实现
+
+``` javascript 
 /**
- * TreeNode
+ * TreeNode 二叉树节点
  * @property {Any} element 储存的元素
  * @property {TreeNode} left 左节点指针
  * @property {TreeNode} right 右节点指针
@@ -17,7 +18,10 @@ class TreeNode {
     this.right = right || null;
   }
 }
+```
+### 递归实现
 
+``` javascript 
 /**
  * BinarySearchTree 二叉查找树: 递归实现
  * @property {TreeNode} root 根节点指针
@@ -147,7 +151,11 @@ class BinarySearchTree {
     return done;
   }
 }
+```
 
+### 迭代实现
+
+``` javascript 
 /**
  * BinarySearchTree 二叉查找树: 迭代实现
  * @property {TreeNode} root 根节点指针
@@ -311,7 +319,13 @@ class BinarySearchTree {
     return true;
   }
 }
+```
 
+二叉查找树将二叉树的2个节点分为左节点和右节点，左节点的值小于父节点，右节点的值大于父节点。因此，二叉查找树的插入查找节点操作效率很高。缺点是删除节点比较麻烦。
+
+## 2. 操作示例
+
+``` javascript 
 const bst = new BinarySearchTree();
 bst.insert(14);  // true
 bst.insert(5);  // true
@@ -322,3 +336,4 @@ bst.find(5);
 //  element: 5,
 //  left: null,
 //  right: TreeNode { element: 8, left: null, right: null } }
+```

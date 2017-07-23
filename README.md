@@ -5,7 +5,7 @@
 * 栈 ------ Stack
 * 队列 ------ Queue
 * 链表 ------ Linked List
-* 二叉查找树 ------ Binary Search Tree
+* 二叉查找树 ------ [Binary Search Tree](https://github.com/stone-yang/algorithms-datastructures-javascript/tree/master/doc/binaryTree)
 * 集合 ------ Set
 
 ## 2. 算法 algorithms
