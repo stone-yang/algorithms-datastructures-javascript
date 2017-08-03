@@ -3,10 +3,10 @@
 ## 1. 数据结构 data structure
 * 数组 ------ [Array](https://github.com/stone-yang/algorithms-datastructures-javascript/tree/master/doc/array.md)
 * 栈 ------ [Stack](https://github.com/stone-yang/algorithms-datastructures-javascript/tree/master/doc/stack.md)
-* 队列 ------ Queue
-* 链表 ------ Linked List
+* 队列 ------[Queue](https://github.com/stone-yang/algorithms-datastructures-javascript/tree/master/doc/queue.md)
+* 链表 ------ [Linked List](https://github.com/stone-yang/algorithms-datastructures-javascript/tree/master/doc/linkedList.md)
 * 二叉查找树 ------ [Binary Search Tree](https://github.com/stone-yang/algorithms-datastructures-javascript/tree/master/doc/binaryTree.md)
-* 集合 ------ Set
+* 集合 ------ [Set](https://github.com/stone-yang/algorithms-datastructures-javascript/tree/master/doc/set.md)
 
 ## 2. 算法 algorithms
 * 快速排序 ------ Quick Sort

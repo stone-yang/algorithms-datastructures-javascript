@@ -1,8 +1,10 @@
-/**
- * 集合 Set
- * Notes: 集合是一种无序的结构,它所包含的元素组成一个类,其中每个元素都是类的成员,特点是不允许同时存在2个相同的元素
- */
+# 集合 Set
 
+集合是一种无序的结构。它所包含的元素组成一个类，其中每个元素都是类的成员。一个集合不允许同时存在2个相同的元素。
+
+## 1. 实现
+
+``` javascript 
 /**
  * Set
  * @property {Array} dataStore 储存元素的空间
@@ -114,10 +116,11 @@ class Set {
     return `{ ${this.dataStore.join(', ')} }`;
   }
 }
+```
 
-/**
- * 操作示例
- */
+## 2. 操作示例
+
+``` javascript 
 const s1 = new Set();
 const s2 = new Set();
 s1.add(1);
@@ -131,3 +134,4 @@ s1.intersect(s2).showAll();  // {3,5}
 s1.subsetOf(s2);  // false
 s1.remove(1); // true
 s1.subsetOf(s2);  // true
+```

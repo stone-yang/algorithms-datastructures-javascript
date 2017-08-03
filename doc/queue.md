@@ -1,9 +1,11 @@
-/**
- * 队列 Queue
- * Notes: 队列是按照先进先出顺序操作元素的线性结构,一般情况下只能在末尾插入元素,在队首删除元素(和栈相反);
- * 对于优先队列结构,优先级最高的元素将被排在队首,优先级最低的排在队尾
- */
+# 队列 Queue
 
+队列是按照先进先出顺序操作元素的线性结构，一般情况下只能在末尾插入元素，在队首删除元素(和栈相反);
+对于优先队列结构，优先级最高的元素将被排在队首，优先级最低的排在队尾。
+
+## 1. 实现
+
+``` javascript 
 /**
  * Queue 应用数组实现队列
  * @property {Array} dataStore 储存元素的空间
@@ -54,12 +56,16 @@ class Queue {
     return str;
   }
 }
+```
 
+## 2. 双栈队列
+
+实现双栈队列: 用2个栈实现队列的入队出队操作。 Implement enqueue and dequeue operations with two stacks.   
+实现方式: 创建一个入队栈和一个出队栈，如果进行出队操作时最先入队的元素在入队栈底，则需要先将元素先压入出队栈再从出队栈顶操作。尽量减少倒栈的频率。
+
+``` javascript 
 /**
- * 实现双栈队列 Implement enqueue and dequeue operations with two stacks
- * 用2个栈实现队列的入队出队操作 
- * 基本解析: 创建一个入队栈和一个出队栈, 如果进行出队操作时最先入队的元素在入队栈底,则需要先将元素先压入出队栈再从出队栈顶操作
- * 优化思路: 尽量减少倒栈的频率
+ * 实现双栈队列: 用2个栈实现队列的入队出队操作 
  * @property {Array} inStack 入队栈
  * @property {Array} outStack 出队栈
  * @property {Number} length 队列的长度
@@ -88,13 +94,15 @@ class Queue {
     return this.outStack.pop();
   }
 }
+```
 
-/**
- * 操作示例
- */
+## 3. 操作示例
+
+``` javascript 
 const q = new Queue();
 q.enqueue(10);
 q.enqueue(5);
 q.enqueue(4);
 q.enqueue(8);
 q.dequeue();  // 10
+```
