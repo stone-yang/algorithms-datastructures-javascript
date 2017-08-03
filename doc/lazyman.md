@@ -183,10 +183,10 @@ function LazyMan(name) {
       });
       // 修改遍历任务队列的函数
       const pTasks = Promise.resolve().then(async() => {
-	  	for (let task of this.tasks) {
-	      await new Promise(task);
-	  	}
-	  });
+        for (let task of this.tasks) {
+          await new Promise(task);
+        }
+      });
     }
     sleep(secs) {
       this.tasks.push((function(secs) {
@@ -224,7 +224,5 @@ function LazyMan(name) {
 }
 ```
 关于process.nextTick、setTimeout、setImmediate等异步api可参考：  
-[JavaScript 运行机制详解：再谈Event Loop]   
-(http://www.ruanyifeng.com/blog/2014/10/event-loop.html)   
-[The Node.js Event Loop, Timers, and process.nextTick()]   
-(https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/#setimmediate-vs-settimeout)
+[JavaScript 运行机制详解：再谈Event Loop](http://www.ruanyifeng.com/blog/2014/10/event-loop.html)   
+[The Node.js Event Loop, Timers, and process.nextTick()](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/#setimmediate-vs-settimeout)
