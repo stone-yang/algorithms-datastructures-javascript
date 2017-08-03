@@ -19,5 +19,5 @@
 
 ## 3. 收藏集 collections
 * 斐波那契数列的多种解法 ------ [fibonacci](https://github.com/stone-yang/algorithms-datastructures-javascript/tree/master/doc/fibonacci.md)
-* 异步流程控制 - Lazyman ------ lazyman
+* 异步流程控制 - Lazyman ------ [lazyman](https://github.com/stone-yang/algorithms-datastructures-javascript/tree/master/doc/lazyman.md)
 * 记那些短小而精悍的JS代码 ------ [collections](https://github.com/stone-yang/algorithms-datastructures-javascript/tree/master/doc/collections.md)
